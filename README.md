@@ -24,7 +24,7 @@ Entire stack consists of an android app, an admin webapp and a backend Restful A
 
 #### Android App:
 ---
-An android app is built for users which has a `.tflite` quality check model deployed on it. This model checks for several parameters for the quality of image and only lets through the images which pass the QC. Using the app, users can register new animals as well as perform identifications on previously onboarded animals. An Admin WebApp is built which is used to monitor incoming data. A Restful API is built which manages the entire stack.
+An android app is built for users which has a `.tflite` quality check model deployed on it. This model checks for several parameters for the quality of image and only lets through the images which pass the QC. Using the app, users can register new animals as well as perform identifications on previously onboarded animals.  
 
 <a href="url"><img src="/assets/nandi_app.jpg" height="480" ></a>  
 
