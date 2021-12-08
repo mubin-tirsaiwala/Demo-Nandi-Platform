@@ -15,12 +15,12 @@ Currently, further field validation is going on for the biometrics part and Data
 
 ### Results and Recognitions :
 ---
-* Demonstrated Few shot learning capabilities with 92% on-field top-1 identification accuracy on cross breed, indigenous cows and buffaloes.
-* Completed Pilot phase for Government of India with data collection of more than 1000 animals from 4 states and 12 regions across India, including both cows and buffaloes.  
+* Completed Pilot phase for Government of India with data collection of more than 1000 animals from 4 states and 12 regions across India, including both cows and buffaloes.
+* Demonstrated Few shot learning capabilities with 92% on-field top-1 identification accuracy on cross breed cattle, indigenous cows and buffaloes.  
 
 ### Components :
 ---
-Entire stack consists of an android app, an admin webapp and a backend Restful API which connects everything together. Everything is bundled into docker containers and deployed as microservices on Azure Cloud.
+Entire stack consists of an android app, an admin webapp and a backend Restful API which connects everything together. Everything is bundled into docker containers and deployed on Azure Cloud.
 
 #### Android App:
 ---
@@ -45,7 +45,7 @@ This api is built using [FastAPI](https://fastapi.tiangolo.com/) and holds the e
 Verification/Identification of the animal works as follows
 1. User clicks an image of the animal.
 2. QC model checks for the quality parameters and either accept or reject the image. (Notice green tick in the video below)
-3. If QC passed, used submits the image else captures again.
+3. If image passes QC, user submits the image else start from step 1 again.
 4. QC pass image is sent to backend along with metadata.
 5. Backend generates embeddings for this image and filters the identification search space based on metadata collected.
 6. Search results (top 3 matches) are sent back to the app.
