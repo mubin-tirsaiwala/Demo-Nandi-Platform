@@ -39,3 +39,17 @@ Admin webapp is built using [wordpress](https://wordpress.com/). Admins can moni
 This api is built using [FastAPI](https://fastapi.tiangolo.com/) and holds the entire stack together. It stores the incoming data from the app into the Azure blob storage and metadata to mongoDB. It runs all the models and retrieves the verification results and sends it to the app as well.
 
 ![Nandi Backend](/assets/nandi_backend.png)
+
+### Verification Demo :
+---
+Verification/Identification of the animal works as follows
+1. User clicks an image of the animal.
+2. QC model checks for the quality parameters and either accept or reject the image. (Notice green tick in the video below)
+3. If QC passed, used submits the image else captures again.
+4. QC pass image is sent to backend along with metadata.
+5. Backend generates embeddings for this image and filters the identification search space based on metadata collected.
+6. Search results (top 3 matches) are sent back to the app.
+7. Feedback from the user is recorded to further tune the model.
+
+https://user-images.githubusercontent.com/73985159/145247672-b5546f71-a132-446e-b22e-0e77b410ab82.mp4
+
